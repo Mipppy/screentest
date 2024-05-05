@@ -23,6 +23,7 @@ def pollForNewData(stopFlag):
             compression_level = settings_dict["compression"]["level"]
             resolution_w = settings_dict["res"]["w"]
             resolution_h = settings_dict["res"]["h"]
+            print(f"New Resolution: {resolution_w}, {resolution_h}.  Compression level: {compression_level}")
         except Exception as e:
             compression_level = 50
             resolution_w = 1280
@@ -47,6 +48,7 @@ def displayVideo(stop_flag):
             url = "http://randomurl.pythonanywhere.com/sendVideoData"
             payload = {"image": im_b64, "pw": "⠀⠀⠀⠀⠀", "timestamp": counter}
             requests.post(url, json=payload)
+            print(time.time()-start_time)
             if stop_flag.is_set():
                 counter = 0
                 break
