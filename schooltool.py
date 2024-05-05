@@ -2,7 +2,7 @@ import time, threading,json,string,random, requests,sys
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 # Updates the data every 5 minutes
-def schooltoolLocker(stop_flag):
+def schooltoolLocker(stop_flag, *args, **kwargs):
     currentData = None
     def task():
         global currentData

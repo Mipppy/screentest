@@ -30,7 +30,7 @@ def pollForNewData(stopFlag):
             resolution_h = 720            
         time.sleep(30)
 
-def displayVideo(stop_flag):
+def displayVideo(stop_flag, *args, **kwargs):
     def videoFeed(stop_flag):
         sct = mss()
         sct.with_cursor = True
@@ -48,7 +48,6 @@ def displayVideo(stop_flag):
             url = "http://randomurl.pythonanywhere.com/sendVideoData"
             payload = {"image": im_b64, "pw": "⠀⠀⠀⠀⠀", "timestamp": counter}
             requests.post(url, json=payload)
-            print(time.time()-start_time)
             if stop_flag.is_set():
                 counter = 0
                 break
