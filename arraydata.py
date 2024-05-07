@@ -23,7 +23,6 @@ def pollForNewData(stopFlag):
             compression_level = settings_dict["compression"]["level"]
             resolution_w = settings_dict["res"]["w"]
             resolution_h = settings_dict["res"]["h"]
-            print(f"New Resolution: {resolution_w}, {resolution_h}.  Compression level: {compression_level}")
         except Exception as e:
             compression_level = 50
             resolution_w = 1280

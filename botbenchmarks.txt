@@ -1,0 +1,15 @@
+Kahoot:
+    MultiDriver - 15 bots, 15 second : 
+        Making Drivers - 34.21
+        Creating Bots - 52.18
+        Closing - 33.94
+    
+    SingleDriver - 15 bots, 15 second:
+        Making Drivers - 6.58
+        Creating Bots - 64.86 
+        Closing - 16.40
+
+    Multiple Multithread Driver - 15 bots, 15 seconds:
+        Making Drivers - 8.23
+        Creating Bots - 13.77
+        Closing - 0.55
